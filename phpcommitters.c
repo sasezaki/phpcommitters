@@ -94,7 +94,7 @@ PHP_MINFO_FUNCTION(phpcommitters)
 {
 	php_info_print_box_start(0);
 	php_printf("<p>show php committers</p>\n");
-	php_printf("<p>Version 1.0.0stable (2010-01-07)</p>\n");
+	php_printf("<p>Version 0.0.1alpha (2010-01-07)</p>\n");
 	php_printf("<p><b>Authors:</b></p>\n");
 	php_printf("<p>Kazusuke Sasezaki &lt;sasezaki@gmail.com&gt; (lead)</p>\n");
 	php_info_print_box_end();
@@ -109,16 +109,17 @@ PHP_MINFO_FUNCTION(phpcommitters)
 PHP_FUNCTION(phpcommitters)
 {
 
-
-
 	if (ZEND_NUM_ARGS()>0)  {
 		WRONG_PARAM_COUNT;
 	}
 
+    if (!sapi_module.phpinfo_as_text) {
+        php_printf("<h1>PHP Committers</h1>\n");
+    } else {
+        php_printf("PHP Committers\n");
+    }
 
-	do {
-		php_printf("todo this!%s", " ");
-	} while (0);
+    RETURN_TRUE; /** phpcredits() return TRUE*/
 }
 /* }}} phpcommitters */
 
