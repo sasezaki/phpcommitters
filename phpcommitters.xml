@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension name="phpcommitters" version="0.0.1">
+  <summary>show php committers</summary>
+  <description><?data
+Prints the list of people who've committed to the PHP project
+  ?></description>
+
+  <maintainers>
+    <maintainer>
+      <user>sasezaki</user>
+      <name>Kazusuke Sasezaki</name>
+      <email>sasezaki@gmail.com</email>
+      <role>lead</role>
+    </maintainer>
+  </maintainers>
+
+  <license>PHP</license>
+
+  <channel>__uri</channel>
+
+  <release>
+    <version>1.0.0</version>
+    <date>2010-01-07</date>
+    <state>stable</state>
+    <notes><?data
+- Initial release.
+    ?></notes>
+  </release>
+
+  <function name="phpcommitters" role="public">
+    <proto>void phpcommitters()</proto>
+    <summary>show php committers</summary>
+    <description><?data
+Outputs "show php committers" and linebreak.
+    ?></description>
+    <code><?data
+php_printf("Hello, World!%s", PHP_EOL);
+    ?></code>
+    <test>
+      <code><?data
+phpcommitters();
+      ?></code>
+      <result mode="plain"><?data
+Hello, World!
+      ?></result>
+    </test>  
+  </function>
+</extension>
+

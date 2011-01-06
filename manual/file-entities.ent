@@ -1,0 +1,4 @@
+<!ENTITY reference.phpcommitters.reference SYSTEM './phpcommitters/reference.xml'>
+<!ENTITY reference.phpcommitters.configure SYSTEM './phpcommitters/configure.xml'>
+<!ENTITY reference.phpcommitters.functions.phpcommitters SYSTEM './phpcommitters/functions/phpcommitters.xml'>
+<!ENTITY reference.phpcommitters.functions SYSTEM './functions.xml'>

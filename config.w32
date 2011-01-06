@@ -1,0 +1,8 @@
+// $ Id: $
+// vim:ft=javascript
+
+ARG_ENABLE('phpcommitters' , 'show php committers', 'no');
+if (PHP_PHPCOMMITTERS == "yes") {
+  EXTENSION("phpcommitters", "phpcommitters.c");
+  AC_DEFINE("HAVE_PHPCOMMITTERS", 1, "phpcommitters support");
+}
